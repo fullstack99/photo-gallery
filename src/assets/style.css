@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    width: 150px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.img-section {
+    text-align: center;
+    margin: 0 auto;
+}
+.image {
+
+    width: 100%;
+    max-width: 400px;
+}
+
+.thumb-image {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 150px;
+}
