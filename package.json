@@ -14,7 +14,6 @@
     "react-router": "^5.0.1",
     "react-router-redux": "^4.0.8",
     "react-scripts": "3.1.1",
-    "react-test-renderer": "^16.9.0",
     "redux": "^4.0.4",
     "redux-persist": "^5.10.0",
     "redux-saga": "^1.0.5",
@@ -24,7 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,5 +41,43 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.12.0"
+  },
+  "jest": {
+    "rootDir": "",
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
+  "transform": {
+    "\\.js$": [
+      "/node_modules/jest"
+    ]
+  },
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ]
 }
