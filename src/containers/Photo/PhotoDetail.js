@@ -21,7 +21,7 @@ class PhotoDetail extends Component {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" className="close-button" onClick={handleClose}>
             Close
           </Button>
         </Modal.Footer>
