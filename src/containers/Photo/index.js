@@ -55,7 +55,8 @@ class Photo extends Component {
   gotoNextPage = () => {
     const { currentPage, pageLimit, totalRecords } = this.state;
     let nextPage = currentPage + 1;
-    if (nextPage > Math.ceil(totalRecords / pageLimit)) {
+    const length = Math.ceil(totalRecords / pageLimit)
+    if (nextPage > length) {
       nextPage = currentPage;
     }
     this.setState({ currentPage: nextPage });
@@ -154,7 +155,7 @@ class Photo extends Component {
   }
 
   render() {
-    if (this.props.photos.isLoaded && this.state.photos.length > 0) {
+    if (this.props.photos && this.props.photos.isLoaded && this.state.photos.length > 0) {
       return (
         <React.Fragment>
           <h1>Favorite Images: {this.props.photos.favoriteImages.length} </h1>

@@ -11,19 +11,15 @@ describe('PhotoDetail', () => {
         const wrapper = shallow(<PhotoDetail show={true} handleClose={onButtonClickMock} photo={{}} />);
         expect(wrapper).toMatchSnapshot();
     });
-});
 
-describe('CloseButton', () => {
-    describe('when user clicks button', () => {
-        it('calls correct function to close modal', () => {
-            const onButtonClickMock = jest.fn();
-            const wrapper = shallow(
-                <PhotoDetail show={true} handleClose={onButtonClickMock} photo={{}} />,
-            );
-            const buttonElement = wrapper.find('.close-button');
-            buttonElement.simulate('click');
+    it('calls correct function to close modal', () => {
+        const onButtonClickMock = jest.fn();
+        const wrapper = shallow(
+            <PhotoDetail show={true} handleClose={onButtonClickMock} photo={{}} />,
+        );
+        const buttonElement = wrapper.find('.close-button');
+        buttonElement.simulate('click');
 
-            expect(onButtonClickMock).toHaveBeenCalledTimes(1);
-        });
+        expect(onButtonClickMock).toHaveBeenCalledTimes(1);
     });
 });
