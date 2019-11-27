@@ -1,8 +1,6 @@
-import * as actions from '../../src/actions'
-// import * as types from '../../src/reducers/photo'
 import * as reducer from '../../src/reducers/photo'
 
-describe('actions', () => {
+describe('Reducers', () => {
 
   it('should return the initial state', () => {
     expect(reducer.default(undefined, {})).toEqual({

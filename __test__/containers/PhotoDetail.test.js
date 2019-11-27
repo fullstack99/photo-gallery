@@ -2,7 +2,7 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 
-import PhotoDetail from '../src/containers/Photo/PhotoDetail';
+import PhotoDetail from '../../src/containers/Photo/PhotoDetail';
 configure({ adapter: new Adapter() });
 
 describe('PhotoDetail', () => {
